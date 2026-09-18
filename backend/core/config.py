@@ -2,25 +2,14 @@ from pydantic_settings import BaseSettings
 from functools import lru_cache
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "MK PRO"
-    API_V1_STR: str = "/api/v1"
-    
-    POSTGRES_URL: str
-    REDIS_URL: str = "redis://localhost:6379/0"
-    
-    JWT_SECRET_KEY: str
-    JWT_ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
-    
-    ENCRYPTION_KEY: str  # For MT5 credentials
-    
-    # Push Notifications
-    ONESIGNAL_APP_ID: str = ""
-    ONESIGNAL_API_KEY: str = ""
-    
+    ENCRYPTION_KEY: str
+    JWT_SECRET_KEY: str = "mkpro-neon-2025-super-secret-key-change-in-production"
+    REDIS_URL: str = "redis://default:your-redis-password@your-redis-host:6379"
+    POSTGRES_URL: str = ""
+
     class Config:
         env_file = ".env"
-        case_sensitive = True
+        extra = "ignore"
 
 @lru_cache()
 def get_settings():
