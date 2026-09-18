@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd backend && pip install -r requirements.txt && cd ../frontend && npm install && npm run build",
+  "startCommand": "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT",
+  "env": {
+    "POSTGRES_URL": { "fromDatabase": "postgres" },
+    "REDIS_URL": { "fromDatabase": "redis" },
+    "ENCRYPTION_KEY": { "generate": true },
+    "JWT_SECRET_KEY": { "generate": true },
+    "ONESIGNAL_APP_ID": "your-onesignal-app-id"
+  }
+}

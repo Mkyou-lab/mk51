@@ -1,0 +1,34 @@
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --accent-neon: #00ff9d;
+  --accent-neon-dark: #00cc7a;
+  --text-primary: #ffffff;
+  --text-secondary: #00ff9d;
+  --danger: #ff3366;
+  --success: #00ff9d;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Space Grotesk', system-ui;
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 10px var(--accent-neon),
+    0 0 20px var(--accent-neon),
+    0 0 40px var(--accent-neon);
+}
+
+.neon-border {
+  border: 2px solid var(--accent-neon);
+  box-shadow: 0 0 15px var(--accent-neon);
+}
+
+.glass {
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+}

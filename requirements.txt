@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-jose
+passlib
+cryptography
+pyotp
+MetaTrader5
+pandas
+pandas-ta
+redis
+python-dotenv
+onesignal-python
