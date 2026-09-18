@@ -1,6 +1,5 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
-  "buildCommand": "echo 'Deploy backend and frontend as separate services'",
-  "deployCommand": "echo 'Monorepo ready'",
-  "rootDirectory": "/"
+  "buildCommand": "echo 'Use separate backend/frontend services with Root Directory'",
+  "deployCommand": "echo 'Monorepo configured correctly'"
 }
